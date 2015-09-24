@@ -3,9 +3,9 @@ import {Component, View, NgClass, OnDestroy} from 'angular2/angular2';
 @Component({
   selector: 'accordion',
   properties: ['onlyOneOpen: closeOthers'],
-  host: {
+  /*host: {
     'class': 'panel-group'
-  }
+  }*/
 })
 @View({
   template: `<ng-content></ng-content>`

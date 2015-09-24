@@ -2,8 +2,9 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "module": "commonjs",
     "sourceMap": true,
-    "target": "ES6",
+    "target": "ES5",
     "outDir": "dist/cjs"
   },
   "exclude": [
