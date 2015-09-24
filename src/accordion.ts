@@ -1,9 +1,5 @@
 import {Component, View, NgClass, OnDestroy} from 'angular2/angular2';
 
-import {iit} from 'angular2/test_lib';
-
-console.log(iit);
-
 @Component({
   selector: 'accordion',
   properties: ['onlyOneOpen: closeOthers'],

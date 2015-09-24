@@ -1,6 +1,16 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es5"
-	}
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "target": "ES6",
+    "outDir": "dist/cjs"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "src/index.ts",
+    "typings/tsd.d.ts"
+  ]
 }

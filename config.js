@@ -14,7 +14,7 @@ System.config({
   },
   packages: {
     "app": {
-      "main": "main.ts",
+      "main": "index.ts",
       "defaultExtension": "ts"
     }
   },

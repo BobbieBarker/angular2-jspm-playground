@@ -1,4 +1,3 @@
-
 export class Foo {
   private names: Array<string> = [];
 

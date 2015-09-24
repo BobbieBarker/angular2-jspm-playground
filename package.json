@@ -1,8 +1,39 @@
 {
+  "name": "angular2-jspm-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "build_all": "npm run build_es6 && npm run build_cjs",
+    "build_cjs": "rm -rf dist/cjs && babel dist/es6 --out-dir dist/cjs --modules common --sourceMaps --loose all",
+    "build_es6": "rm -rf dist/es6 && tsc typings/angular2/angular2.d.ts src/index.ts --outDir dist/es6 --target ES6 -d --experimentalDecorators"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BobbieBarker/angular2-jspm-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BobbieBarker/angular2-jspm-playground/issues"
+  },
+  "homepage": "https://github.com/BobbieBarker/angular2-jspm-playground#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "typescript": "^1.6.2"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.37"
+  },
   "jspm": {
     "directories": {},
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-alpha.37"
-    }
+    },
+    "devDependencies": {}
+  },
+  "format": "es6",
+  "directories": {
+    "lib": "src"
   }
 }
