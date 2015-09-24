@@ -15,7 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'dist/cjs/accordion.js'
+      //{pattern: 'dist/test/**', included: false, watched: false},
+      'dist/test/**/*.js',
+      //'node_modules/systemjs/dist/system.src.js',
+      //'test-main.js'
     ],
 
 

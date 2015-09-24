@@ -6,7 +6,9 @@
   "scripts": {
     "build_all": "npm run build_es6 && npm run build_cjs",
     "build_cjs": "rm -rf dist/cjs && babel dist/es6 --out-dir dist/cjs --modules common --sourceMaps --loose all",
-    "build_es6": "rm -rf dist/es6 && tsc typings/angular2/angular2.d.ts src/index.ts --outDir dist/es6 --target ES6 -d --experimentalDecorators"
+    "build_es6": "rm -rf dist/es6 && tsc typings/angular2/angular2.d.ts src/index.ts --outDir dist/es6 --target ES6 -d --experimentalDecorators",
+    "build_source": "rm -rf dist/src && tsc typings/angular2/angular2.d.ts src/index.ts --outDir dist/src --target ES5 -d --experimentalDecorators --module commonjs",
+    "build_test": "rm -rf dist/test && tsc typings/tsd.d.ts test/foo_spec.ts --outDir dist/test --target ES5 -d --experimentalDecorators --module commonjs"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,9 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "jspm": "^0.16.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "systemjs": "^0.19.3",
     "typescript": "^1.6.2"
   },
   "dependencies": {
