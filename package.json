@@ -1,0 +1,8 @@
+{
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-alpha.37"
+    }
+  }
+}
