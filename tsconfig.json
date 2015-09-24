@@ -3,7 +3,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "target": "ES6",
+    "module": "commonjs",
+    "target": "ES5",
     "outDir": "dist/cjs"
   },
   "exclude": [
