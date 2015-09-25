@@ -1,7 +1,8 @@
 System.config({
     transpiler: 'typescript',
     paths: {
-        'angular2/angular2': 'node_modules/angular2/angular2.js',
+        'angular2/*': 'node_modules/angular2/ts/*.ts',
+        'rx': 'node_modules/angular2/node_modules/rx/dist/rx.js',
         'typescript': 'node_modules/typescript/lib/typescript.js',
         'systemjs': 'node_modules/systemjs/dist/system.src.js',
         'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
@@ -11,9 +12,9 @@ System.config({
     packages: {
         'test': { defaultExtension: 'ts' },
         'src' : { defaultExtension: 'ts' },
-        'node_modules/angular2': {
+        'node_modules/angular2/ts': {
             main: 'angular2',
-            defaultExtension: 'js'
+            defaultExtension: 'ts'
         }
     }
 });
