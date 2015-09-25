@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'commonjs'],
 
 
     // list of files / patterns to load in the browser
@@ -31,7 +31,18 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*.js': ['commonjs']
     },
+    
+    commonjsPreprocessor: {
+      shouldExecFile: function (file) {
+        return file.path.indexOf('/specs/') > -1;
+      },
+      processContent: function (content, file, cb) {
+        // make sure content is executed in stricter mode during testing 
+        cb("'use strict';\n" + content);
+      }  
+     },
 
 
     // test results reporter to use

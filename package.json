@@ -24,9 +24,9 @@
     "babel": "^5.8.23",
     "jspm": "^0.16.10",
     "karma-chrome-launcher": "^0.2.0",
+    "karma-commonjs-plus": "^1.0.0",
     "karma-jasmine": "^0.3.6",
-    "systemjs": "^0.19.3",
-    "typescript": "^1.6.2"
+    "systemjs": "^0.19.3"
   },
   "dependencies": {
     "angular2": "^2.0.0-alpha.37"
