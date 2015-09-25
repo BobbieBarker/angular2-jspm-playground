@@ -4,21 +4,35 @@
 module.exports = function(config) {
   config.set({
 
+    plugins: [
+      require('karma-systemjs'),
+      require('karma-jasmine'),
+      require('karma-phantomjs-launcher'),
+      require('karma-chrome-launcher')
+    ],
+
+    systemjs: {
+      configFile: 'system.config.js',
+      // These files are served by Karma, but loaded using SystemJS
+      files: ['./src/**/*.ts', './test/**/*.ts', './node_modules/angular2/**/*'],
+      // This is turned into a regexp and used to load specs into Karma
+      testFileSuffix: "/test/\\S+.[tj]s"
+    },
+
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['systemjs', 'jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      //{pattern: 'dist/test/**', included: false, watched: false},
-      'dist/test/**/*.js',
-      //'node_modules/systemjs/dist/system.src.js',
-      //'test-main.js'
+      { watched: false, included: false, nocache: true, pattern: 'node_modules/**/*' },
+      { watched: true, included: true, nocache: true, pattern: 'src/*.ts' },
+      { watched: true, included: true, nocache: true, pattern: 'test/*.ts' }
     ],
 
 
@@ -26,12 +40,6 @@ module.exports = function(config) {
     exclude: [
       
     ],
-
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
 
 
     // test results reporter to use

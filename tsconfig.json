@@ -4,7 +4,7 @@
     "experimentalDecorators": true,
     "module": "commonjs",
     "sourceMap": true,
-    "target": "ES5",
+    "target": "ES6",
     "outDir": "dist/cjs"
   },
   "exclude": [
